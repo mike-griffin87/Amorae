@@ -1,6 +1,7 @@
 import React from 'react';
 import "../static/booking.sass";
 import Button from '../components/Button';
+import Overlay from '../components/Overlay';
 
 class BookAppointment extends React.Component {
     constructor(props) {
@@ -17,16 +18,9 @@ class BookAppointment extends React.Component {
     }
 
     render(){
-
-        const classes = this.props.modalIsOpen ? 'is-open' : 'null';
-
         return(
             <div>
-                <div
-                    className={`${classes} overlay`}
-                    onClick={this.props.closeModal}>
-                </div>
-                <div className={`${classes} booking-card`}>
+                <div className={`booking-card ${this.props.active ? 'is-open' : 'null'}`}>
                     <div className="text-content">
                         <h2>Book an Appointment</h2>
                         <p>Book your appointment using the contact form below or call us on <a href="tel: +441277366436">+44 1277 366 436</a>.</p>

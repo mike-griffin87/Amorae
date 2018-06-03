@@ -5,14 +5,17 @@ import Footer from '../components/Footer';
 import "../static/style.sass"
 
 class Layout extends React.Component {
+    // constructor(){
+    //     super();
+    //     this.state = {
+    //         appointment: false
+    //     }
+    // }
 
     render(){
         return(
             <div>
-                <BookAppointment
-                    modalIsOpen={this.props.modalOpen}
-                    closeModal={this.props.modalClose}
-                />
+                <BookAppointment active={this.props.appointment} />
                 <div className="nav-container"></div>
                 <Navigation />
                 {this.props.children}

@@ -1,7 +1,9 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
+import Overlay from '../components/Overlay';
 import "../static/homepage.sass";
+import BookAppointment from '../components/BookAppointment';
 
 
 
@@ -9,17 +11,21 @@ class Homepage extends React.Component {
     constructor(){
         super();
         this.state = {
-            active: false
+            appointment: false
         }
     }
 
-    handleModal() {
-        this.setState({ active: !this.state.active });
+    handleAppointment() {
+        this.setState({appointment: !this.state.appointment})
     }
 
     render(){
         return (
-            <Layout modalOpen={this.state.active} modalClose={() => this.handleModal()}>
+            <Layout appointment={this.state.appointment}>
+                <Overlay
+                    onClick={() => this.handleAppointment()}
+                    overlay={this.state.appointment}
+                    coverNav="true" />
                 <div className="hero">
                     <span className="hero-wave">
                     <img src="../static/images/hero-wave.svg" />
@@ -41,7 +47,7 @@ class Homepage extends React.Component {
 
                     <p>From the moment you step into Amorae you can expect a warm welcome from our friendly, experienced staff. We offer a one-to-one service so the bride can have the privacy of the shop to herself to choose the most important dress she will ever wear. From the simple and elegant to the contemporary and those with the added wow factor, our extensive selection of dresses have been carefully chosen from the industries top designers.</p>
 
-                    <p>You are welcome to browse at any time. If you want to try on gowns please <a onClick={() => this.handleModal()}>let us know</a>, so we can guarantee that you are given our full attention; we really wouldn't want it any other way!</p>
+                    <p>You are welcome to browse at any time. If you want to try on gowns please <a onClick={() => this.handleAppointment()}>let us know</a>, so we can guarantee that you are given our full attention; we really wouldn't want it any other way!</p>
 
                     <p>Look forward to meeting you soon</p>
 

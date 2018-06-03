@@ -13,6 +13,7 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_booking_sass__ = __webpack_require__("./static/booking.sass");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_booking_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_booking_sass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Button__ = __webpack_require__("./components/Button.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Overlay__ = __webpack_require__("./components/Overlay.js");
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/BookAppointment.js";
 
 (function () {
@@ -34,6 +35,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -65,51 +67,43 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      var classes = this.props.modalIsOpen ? 'is-open' : 'null';
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "".concat(classes, " overlay"),
-        onClick: this.props.closeModal,
+        className: "booking-card ".concat(this.props.active ? 'is-open' : 'null'),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "".concat(classes, " booking-card"),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 23
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "text-content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 24
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 25
         }
       }, "Book an Appointment"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 26
         }
       }, "Book your appointment using the contact form below or call us on ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         href: "tel: +441277366436",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 26
         }
       }, "+44 1277 366 436"), ".")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 28
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         placeholder: "Your Name",
@@ -121,7 +115,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 29
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         placeholder: "Your Contact Number",
@@ -133,7 +127,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 34
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         placeholder: "Your Email",
@@ -146,7 +140,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 39
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         placeholder: "Your Wedding Date",
@@ -159,7 +153,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 45
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", {
         placeholder: "Message / Comments",
@@ -171,27 +165,27 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 51
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "form-controls",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 56
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Button__["a" /* default */], {
         btnClass: "secondary no-icon",
         btnText: "Cancel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 57
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Button__["a" /* default */], {
         btnClass: "primary no-icon",
         btnText: "Send",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 58
         }
       }))));
     }
@@ -401,34 +395,39 @@ function (_React$Component) {
 
   _createClass(Layout, [{
     key: "render",
+    // constructor(){
+    //     super();
+    //     this.state = {
+    //         appointment: false
+    //     }
+    // }
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 17
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_BookAppointment__["a" /* default */], {
-        modalIsOpen: this.props.modalOpen,
-        closeModal: this.props.modalClose,
+        active: this.props.appointment,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 18
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "nav-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 19
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Navigation__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 20
         }
       }), this.props.children, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Footer__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 22
         }
       }));
     }
@@ -477,8 +476,10 @@ var _default = Layout;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_data_data_navigation__ = __webpack_require__("./static/data/data-navigation.json");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_data_data_navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_data_data_navigation__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_navigation_sass__ = __webpack_require__("./static/navigation.sass");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_navigation_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_navigation_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Overlay__ = __webpack_require__("./components/Overlay.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_BookAppointment__ = __webpack_require__("./components/BookAppointment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_navigation_sass__ = __webpack_require__("./static/navigation.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_navigation_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_navigation_sass__);
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Navigation.js";
 
 (function () {
@@ -506,6 +507,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
+
 var Navigation =
 /*#__PURE__*/
 function (_React$Component) {
@@ -519,16 +522,28 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (Navigation.__proto__ || Object.getPrototypeOf(Navigation)).call(this));
     _this.state = {
       active: false,
-      navDropdown: false
+      overlay: false,
+      navDropdown: false,
+      appointment: false
     };
     return _this;
   }
 
   _createClass(Navigation, [{
-    key: "handleNav",
-    value: function handleNav() {
+    key: "closeNav",
+    value: function closeNav() {
       this.setState({
-        active: !this.state.active
+        active: !this.state.active,
+        overlay: !this.state.overlay
+      });
+    }
+  }, {
+    key: "closeOverlay",
+    value: function closeOverlay() {
+      this.setState({
+        overlay: false,
+        active: false,
+        appointment: false
       });
     }
   }, {
@@ -536,6 +551,22 @@ function (_React$Component) {
     value: function handleDropdown() {
       this.setState({
         navDropdown: !this.state.navDropdown
+      });
+    }
+  }, {
+    key: "closeAppointment",
+    value: function closeAppointment() {
+      this.setState({
+        overlay: !this.state.overlay,
+        appointment: !this.state.appointment
+      });
+    }
+  }, {
+    key: "openAppointment",
+    value: function openAppointment() {
+      this.setState({
+        active: !this.state.active,
+        appointment: !this.state.appointment
       });
     }
   }, {
@@ -547,77 +578,85 @@ function (_React$Component) {
         this.state.active == true ? document.body.style.overflowY = "hidden" : document.body.style.overflowY = "scroll";
       }
 
-      var classes = this.props.isOpen ? 'is-open' : 'null';
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 54
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "".concat(classes, " overlay"),
-        onClick: this.props.closeModal,
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_BookAppointment__["a" /* default */], {
+        active: this.state.appointment,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 55
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Overlay__["a" /* default */], {
+        coverNav: this.state.appointment,
+        overlay: this.state.overlay,
+        onClick: function onClick() {
+          return _this2.closeOverlay();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         onClick: function onClick() {
-          return _this2.handleNav();
+          return _this2.closeNav();
         },
         className: "hamburger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 57
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         className: "".concat(this.state.active ? 'is-open' : 'null', " top"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 58
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         className: "".concat(this.state.active ? 'is-open' : 'null', " middle"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 59
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         className: "".concat(this.state.active ? 'is-open' : 'null', " bottom"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 60
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "".concat(this.state.active ? 'is-open' : 'null', " nav-panel"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 62
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("nav", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 63
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 64
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
         href: "homepage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 65
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 66
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 66
         }
       }, "Home"))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
         onClick: function onClick() {
@@ -626,72 +665,75 @@ function (_React$Component) {
         className: "".concat(this.state.navDropdown ? 'is-open' : 'null', " dropdown"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        }
-      }, "Our Designers"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
-        className: this.state.navDropdown ? 'is-open' : 'null',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        }
-      }, __WEBPACK_IMPORTED_MODULE_2__static_data_data_navigation___default.a.map(function (d, i) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
-          href: d.link,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 54
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
-          key: i,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 54
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 55
-          }
-        }, d.navTitle), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56
-          }
-        }, d.navTagLine)));
-      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61
-        }
-      }, "Sample Sale")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        }
-      }, "Book an Appointment")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 68
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 69
+        }
+      }, "Our Designers"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
+        className: this.state.navDropdown ? 'is-open' : 'null',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        }
+      }, __WEBPACK_IMPORTED_MODULE_2__static_data_data_navigation___default.a.map(function (d, i) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_link___default.a, {
+          href: d.link,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72
+          }
+        }, d.navTitle), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73
+          }
+        }, d.navTagLine)));
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        }
+      }, "Sample Sale")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+        onClick: function onClick() {
+          return _this2.openAppointment();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        }
+      }, "Book an Appointment")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
         }
       }, "Contact us"))))));
     }
@@ -722,6 +764,97 @@ var _default = Navigation;
 
   reactHotLoader.register(Navigation, "Navigation", "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Navigation.js");
   reactHotLoader.register(_default, "default", "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Navigation.js");
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./components/Overlay.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_overlay_sass__ = __webpack_require__("./static/overlay.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_overlay_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_overlay_sass__);
+var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Overlay.js";
+
+
+(function () {
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var Overlay =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Overlay, _React$Component);
+
+  function Overlay() {
+    _classCallCheck(this, Overlay);
+
+    return _possibleConstructorReturn(this, (Overlay.__proto__ || Object.getPrototypeOf(Overlay)).apply(this, arguments));
+  }
+
+  _createClass(Overlay, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        onClick: this.props.onClick,
+        className: "overlay ".concat(this.props.coverNav ? 'cover-nav' : 'null', " ").concat(this.props.overlay ? 'is-open' : 'null'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        }
+      });
+    }
+  }, {
+    key: "__reactstandin__regenerateByEval",
+    // @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {
+      // @ts-ignore
+      this[key] = eval(code);
+    }
+  }]);
+
+  return Overlay;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var _default = Overlay;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
+
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Overlay, "Overlay", "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Overlay.js");
+  reactHotLoader.register(_default, "default", "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/Overlay.js");
   leaveModule(module);
 })();
 
@@ -1654,8 +1787,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Button__ = __webpack_require__("./components/Button.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_homepage_sass__ = __webpack_require__("./static/homepage.sass");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_homepage_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_homepage_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Overlay__ = __webpack_require__("./components/Overlay.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_homepage_sass__ = __webpack_require__("./static/homepage.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_homepage_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_homepage_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_BookAppointment__ = __webpack_require__("./components/BookAppointment.js");
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/pages/homepage.js";
 
 (function () {
@@ -1683,6 +1818,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
+
 var Homepage =
 /*#__PURE__*/
 function (_React$Component) {
@@ -1695,16 +1832,16 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, (Homepage.__proto__ || Object.getPrototypeOf(Homepage)).call(this));
     _this.state = {
-      active: false
+      appointment: false
     };
     return _this;
   }
 
   _createClass(Homepage, [{
-    key: "handleModal",
-    value: function handleModal() {
+    key: "handleAppointment",
+    value: function handleAppointment() {
       this.setState({
-        active: !this.state.active
+        appointment: !this.state.appointment
       });
     }
   }, {
@@ -1713,31 +1850,38 @@ function (_React$Component) {
       var _this2 = this;
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {
-        modalOpen: this.state.active,
-        modalClose: function modalClose() {
-          return _this2.handleModal();
-        },
+        appointment: this.state.appointment,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Overlay__["a" /* default */], {
+        onClick: function onClick() {
+          return _this2.handleAppointment();
+        },
+        overlay: this.state.appointment,
+        coverNav: "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "hero",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 29
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         className: "hero-wave",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 30
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: "../static/images/hero-wave.svg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 31
         }
       }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Button__["a" /* default */], {
         link: "/ourCollection",
@@ -1746,69 +1890,69 @@ function (_React$Component) {
         btnIcon: "fa fa-arrow-right icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 34
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
         className: "main-body",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 39
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
         className: "tab",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 40
         }
       }, "About Amorae"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "img-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 41
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         src: "../static/images/amorae-shop.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 42
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 44
         }
       }, "We're an award winning bridal shop in Essex."), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 46
         }
       }, "We are located in the historic market town of Ongar, Essex. Approximately 6 miles North of Brentwood, 9 miles to the West of Chelmsford and 7 miles East of Harlow, with transport links via the A414 and the M11."), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 48
         }
       }, "From the moment you step into Amorae you can expect a warm welcome from our friendly, experienced staff. We offer a one-to-one service so the bride can have the privacy of the shop to herself to choose the most important dress she will ever wear. From the simple and elegant to the contemporary and those with the added wow factor, our extensive selection of dresses have been carefully chosen from the industries top designers."), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 50
         }
       }, "You are welcome to browse at any time. If you want to try on gowns please ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a", {
         onClick: function onClick() {
-          return _this2.handleModal();
+          return _this2.handleAppointment();
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 50
         }
       }, "let us know"), ", so we can guarantee that you are given our full attention; we really wouldn't want it any other way!"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 52
         }
       }, "Look forward to meeting you soon"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 54
         }
       }, "Emmalee, Maria & Janis Amorae")));
     }

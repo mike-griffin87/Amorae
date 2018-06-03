@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link'
 import navData from '../static/data/data-navigation';
+import Overlay from '../components/Overlay';
+import BookAppointment from '../components/BookAppointment';
 import "../static/navigation.sass";
 
 
@@ -12,32 +14,47 @@ class Navigation extends React.Component {
 
         this.state = {
             active: false,
-            navDropdown: false
+            overlay: false,
+            navDropdown: false,
+            appointment: false
         }
     }
 
-    handleNav() {
-        this.setState({ active: !this.state.active });
+    closeNav() {
+        this.setState({ active: !this.state.active, overlay: !this.state.overlay });
+    }
+
+    closeOverlay() {
+        this.setState({ overlay: false, active: false, appointment: false }); 
     }
 
     handleDropdown() {
         this.setState({ navDropdown: !this.state.navDropdown});
     }
+
+    closeAppointment() {
+        this.setState({
+            overlay: !this.state.overlay,
+            appointment: !this.state.appointment
+        });
+    }
+
+    openAppointment(){
+        this.setState({
+            active: !this.state.active,
+            appointment: !this.state.appointment
+        });
+    }
     
     render(){
         if (typeof window !== 'undefined') {
             this.state.active == true ? document.body.style.overflowY = "hidden" : document.body.style.overflowY= "scroll";
-        }
-
-        const classes = this.props.isOpen ? 'is-open' : 'null';
-        
+        }        
         return(
             <div>
-                <div
-                    className={`${classes} overlay`}
-                    onClick={this.props.closeModal}>
-                </div>
-                <div onClick={() => this.handleNav()} className="hamburger">
+                <BookAppointment active={this.state.appointment}/>
+                <Overlay coverNav={this.state.appointment} overlay={this.state.overlay} onClick={() => this.closeOverlay()} />
+                <div onClick={() => this.closeNav()} className="hamburger">
                     <span className={(`${this.state.active ? 'is-open' : 'null'} top`)}></span>
                     <span className={(`${this.state.active ? 'is-open' : 'null'} middle`)}></span>
                     <span className={(`${this.state.active ? 'is-open' : 'null'} bottom`)}></span>
@@ -59,15 +76,12 @@ class Navigation extends React.Component {
                         </li>
                         <li>
                             <h2>Sample Sale</h2>
-                            {/* <span>Learn more about Amorae Bridal</span> */}
                         </li>
                         <li>
-                            <h2>Book an Appointment</h2>
-                            {/* <span>Learn more about Amorae Bridal</span> */}
+                            <h2 onClick={() => this.openAppointment()}>Book an Appointment</h2>
                         </li>
                         <li>
                             <h2>Contact us</h2>
-                            {/* <span>Learn more about Amorae Bridal</span> */}
                         </li>
                     </ul>
                     </nav>

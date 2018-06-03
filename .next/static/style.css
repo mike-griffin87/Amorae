@@ -1,107 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Niconne|Roboto:400,700);@media (max-width: 980px) {
-  nav {
-    margin-top: 72px; }
-    nav ul {
-      list-style: none; }
-      nav ul ul {
-        display: none;
-        transition: all .25s; }
-        nav ul ul li {
-          margin: 24px 0; }
-          nav ul ul li h2 {
-            font-size: 20px; }
-        nav ul ul.is-open {
-          display: block; }
-      nav ul li {
-        position: relative;
-        margin: 32px 0;
-        opacity: 0.8;
-        cursor: pointer; }
-        nav ul li h2 {
-          padding: 0;
-          margin: 0; }
-        nav ul li span {
-          color: #6C6C6C;
-          font-size: 14px;
-          font-style: italic; }
-        nav ul li:hover {
-          opacity: 1;
-          color: #4a4a4a; }
-  .dropdown {
-    cursor: pointer; }
-    .dropdown:after {
-      content: '\F0D7';
-      position: absolute;
-      color: rgba(74, 74, 74, 0.75);
-      top: 4px;
-      left: 60%;
-      transition: all .25s ease-in-out;
-      font-family: FontAwesome;
-      font-size: 22px; } }
-    @media (max-width: 980px) and (max-width: 440px) {
-      .dropdown:after {
-        left: 70%; } }
-    @media (max-width: 980px) and (min-width: 600px) {
-      .dropdown:after {
-        left: 40%; } }
-
-@media (max-width: 980px) {
-    .dropdown.is-open:after {
-      color: #4a4a4a;
-      transform: rotate(-180deg); }
-  .hamburger {
-    display: block;
-    width: 32px;
-    height: 25px;
-    position: fixed;
-    top: 16px;
-    right: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 90;
-    transition: all .25s ease-in-out; }
-  .top, .middle, .bottom {
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    background: #fff;
-    transition: all .25s ease-in-out;
-    border-radius: 50px; }
-    .top.is-open, .middle.is-open, .bottom.is-open {
-      background: #4a4a4a; }
-  .hamburger .top {
-    top: 0; }
-    .hamburger .top.is-open {
-      top: 11px;
-      transform: rotate(45deg); }
-  .hamburger .middle.is-open {
-    opacity: 0; }
-  .hamburger .bottom {
-    bottom: 0; }
-    .hamburger .bottom.is-open {
-      bottom: 11px;
-      transform: rotate(-45deg); } }
-
-.nav-panel {
-  background: white;
-  height: 100vh;
-  overflow-y: scroll;
-  display: block;
+@import url(https://fonts.googleapis.com/css?family=Niconne|Roboto:400,700);.overlay {
   position: fixed;
-  width: 80%;
+  left: 0;
   top: 0;
-  right: 0;
-  margin-right: -80%;
-  transition: all .15s ease-in-out;
-  z-index: 80; }
-  @media (max-width: 320px) {
-    .nav-panel {
-      width: 100%;
-      margin-right: -100%; } }
-  .nav-panel.is-open {
-    margin-right: 0; }
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: block;
+  opacity: 0;
+  transition: all .25s ease-in-out;
+  pointer-events: none;
+  z-index: 80;
+  cursor: pointer; }
+  .overlay.cover-nav {
+    z-index: 90; }
+  .overlay.is-open {
+    opacity: .75;
+    pointer-events: auto; }
 .booking-card {
   width: 90%;
   height: auto;
@@ -165,6 +79,110 @@
   font-size: 16px;
   font-weight: regular;
   z-index: 10; }
+@media (max-width: 980px) {
+  nav {
+    margin-top: 72px; }
+    nav ul {
+      list-style: none; }
+      nav ul ul {
+        display: none;
+        transition: all .25s; }
+        nav ul ul li {
+          margin: 24px 0; }
+          nav ul ul li h2 {
+            font-size: 20px; }
+        nav ul ul.is-open {
+          display: block; }
+      nav ul li {
+        position: relative;
+        margin: 32px 0;
+        opacity: 0.8;
+        cursor: pointer; }
+        nav ul li h2 {
+          padding: 0;
+          margin: 0; }
+        nav ul li span {
+          color: #6C6C6C;
+          font-size: 14px;
+          font-style: italic; }
+        nav ul li:hover {
+          opacity: 1;
+          color: #4a4a4a; }
+  .dropdown {
+    cursor: pointer; }
+    .dropdown:after {
+      content: '\F0D7';
+      position: absolute;
+      color: rgba(74, 74, 74, 0.75);
+      top: 4px;
+      left: 60%;
+      transition: all .25s ease-in-out;
+      font-family: FontAwesome;
+      font-size: 22px; } }
+    @media (max-width: 980px) and (max-width: 440px) {
+      .dropdown:after {
+        left: 70%; } }
+    @media (max-width: 980px) and (min-width: 600px) {
+      .dropdown:after {
+        left: 40%; } }
+
+@media (max-width: 980px) {
+    .dropdown.is-open:after {
+      color: #4a4a4a;
+      transform: rotate(-180deg); }
+  .hamburger {
+    display: block;
+    width: 32px;
+    height: 25px;
+    position: fixed;
+    top: 16px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 85;
+    transition: all .25s ease-in-out; }
+  .top, .middle, .bottom {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: #fff;
+    transition: all .25s ease-in-out;
+    border-radius: 50px; }
+    .top.is-open, .middle.is-open, .bottom.is-open {
+      background: #4a4a4a; }
+  .hamburger .top {
+    top: 0; }
+    .hamburger .top.is-open {
+      top: 11px;
+      transform: rotate(45deg); }
+  .hamburger .middle.is-open {
+    opacity: 0; }
+  .hamburger .bottom {
+    bottom: 0; }
+    .hamburger .bottom.is-open {
+      bottom: 11px;
+      transform: rotate(-45deg); } }
+
+.nav-panel {
+  background: white;
+  height: 100vh;
+  overflow-y: scroll;
+  display: block;
+  position: fixed;
+  width: 80%;
+  top: 0;
+  right: 0;
+  margin-right: -80%;
+  transition: all .15s ease-in-out;
+  z-index: 80; }
+  @media (max-width: 320px) {
+    .nav-panel {
+      width: 100%;
+      margin-right: -100%; } }
+  .nav-panel.is-open {
+    margin-right: 0; }
 html {
   box-sizing: border-box; }
 
@@ -237,23 +255,6 @@ img {
   position: relative;
   z-index: 10;
   display: inline-block; }
-
-.overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: block;
-  opacity: 0;
-  transition: all .25s ease-in-out;
-  pointer-events: none;
-  z-index: 80;
-  cursor: pointer; }
-  .overlay.is-open {
-    opacity: .75;
-    pointer-events: auto; }
 .hero {
   background-image: url("/../static/images/hero.jpg");
   background-size: cover;
