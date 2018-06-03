@@ -1,0 +1,129 @@
+//Variables
+
+@media (max-width: 980px)
+
+    nav
+        margin-top: 72px
+
+        ul
+            list-style: none
+
+            ul
+                display: none
+                transition: all .25s
+                li
+                    margin: 24px 0
+                    h2
+                        font-size: 20px
+                &.is-open
+                    display: block
+
+            li
+                position: relative
+                margin: 32px 0
+                opacity: 0.8
+                cursor: pointer
+                h2
+                    padding: 0
+                    margin: 0
+                span
+                    color: #6C6C6C
+                    font:
+                        size: 14px
+                        style: italic
+                &:hover
+                    opacity: 1
+                    color: #4a4a4a
+
+    .dropdown
+        cursor: pointer
+        &:after
+            content: '\f0d7'
+            position: absolute
+            color: rgba(#4a4a4a, .75)
+            top: 4px
+            left: 60%
+            transition: all .25s ease-in-out
+            font:
+                family: FontAwesome
+                size: 22px
+
+            @media (max-width: 440px)
+                left: 70%
+
+            @media (min-width: 600px)
+                left: 40%
+
+
+        &.is-open
+            &:after
+                color: rgba(#4a4a4a, 1)
+                transform: rotate(-180deg)
+
+
+    .hamburger
+        display: block
+        width: 32px
+        height: 25px
+        position: fixed
+        top: 16px
+        right: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        z-index: 90
+        
+        transition: all .25s ease-in-out
+
+    .top, .middle, .bottom
+            width: 100%
+            height: 3px
+            position: absolute
+            background: #fff
+            transition: all .25s ease-in-out
+            border: 
+                radius: 50px
+
+            &.is-open
+                background: #4a4a4a
+        
+    .hamburger .top
+        top: 0
+        &.is-open
+            top: 11px
+            transform: rotate(45deg)
+
+    .hamburger .middle
+        &.is-open
+            opacity: 0
+
+
+    .hamburger .bottom
+        bottom: 0
+        &.is-open
+            bottom: 11px
+            transform: rotate(-45deg)
+    
+
+
+.nav-panel
+    background: white
+    height: 100vh
+    overflow-y: scroll
+    display: block
+    position: fixed
+    width: 80%
+    top: 0
+    right: 0
+    margin-right: -80%
+    transition: all .15s ease-in-out
+    z-index: 80
+
+    @media (max-width: 320px)
+        width: 100%
+        margin-right: -100%
+
+
+    &.is-open
+        margin-right: 0

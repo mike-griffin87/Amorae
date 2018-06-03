@@ -1,0 +1,44 @@
+.booking-card
+    width: 90%
+    height: auto
+    margin-left: 5%
+    padding: 40px 0
+    background: white
+    position: fixed
+    border-radius: 4px
+    top: 8%
+    z-index: 100
+    opacity: 0
+    pointer-events: none
+    transform: translateY(-50px)
+    transition: all .25s ease-in-out
+
+    &.is-open
+        transform: translateY(0)
+        opacity: 1
+        pointer-events: auto
+
+    input, textarea
+        position: relative
+        width: 80%
+        color: #6C6C6C
+        padding: 11px 8px
+        margin-top: 16px
+        margin-left: 10%
+        border: 1px solid #979797
+            radius: 3px
+        font-size: 16px
+
+        &::-webkit-input-placeholder
+            color: rgba(#6C6C6C, .7)
+
+    .text-content
+        width: 80%
+        margin-left: 10%
+
+        h2
+            margin-bottom: 4px
+
+    .form-controls
+        margin: 24px 0 0 0
+        text-align: center

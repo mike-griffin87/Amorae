@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne|Roboto:400,700')
+
+$orange: #F5A623
+
+
+html
+  box-sizing: border-box
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+
+body
+    margin: 0
+    width: 100vw
+    overflow-x: hidden
+    font-family: Roboto
+
+.nav-container
+    background: transparent
+    width: 100%
+    height: 60px
+    position: fixed
+    top: 0
+    display: flex
+    align-items: center
+    z-index: 70
+    & .logo
+        margin-left: 40px
+        color: $orange
+        text-transform: uppercase
+        font:
+            family: Niconne
+            size: 32px
+
+h1, h2, h3, h4, p
+    margin: 0
+    padding: 0
+
+h2
+    color: #4A4A4A
+    font-size: 26px
+    margin-bottom: 16px
+
+    &.tab:before
+        content: ''
+        border-left: 4px solid $orange
+        margin-left: -14px
+        padding-right: 10px
+
+p
+    line-height: 26px
+    color: #6C6C6C
+    font:
+        size: 16px
+
+a
+    color: $orange
+    border-bottom: 2px solid $orange
+    cursor: pointer
+    transition: all .25s ease-in-out
+    text-decoration: none
+    font:
+        weight: bold
+    &:hover
+        color: darken($orange, 15%)
+        border-bottom: 2px solid rgba($orange, 0)
+    
+
+.footer
+    position: absolute
+    width: 100vw
+    height: 4px
+    display: block
+    background: $orange
+    margin-top: 40px
+
+img
+    width: 100%
+    height: auto
+    position: relative
+    z-index: 10
+    display: inline-block
+
+.overlay
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0, 1)
+    display: block
+    opacity: 0
+    transition: all .25s ease-in-out
+    pointer-events: none
+    z-index: 80
+    cursor: pointer
+
+
+    &.is-open
+        opacity: .75
+        pointer-events: auto
