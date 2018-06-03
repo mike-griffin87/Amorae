@@ -54,10 +54,10 @@ class Navigation extends React.Component {
             <div>
                 <BookAppointment active={this.state.appointment}/>
                 <Overlay coverNav={this.state.appointment} overlay={this.state.overlay} onClick={() => this.closeOverlay()} />
-                <div onClick={() => this.closeNav()} className="hamburger">
-                    <span className={(`${this.state.active ? 'is-open' : 'null'} top`)}></span>
-                    <span className={(`${this.state.active ? 'is-open' : 'null'} middle`)}></span>
-                    <span className={(`${this.state.active ? 'is-open' : 'null'} bottom`)}></span>
+                <div onClick={() => this.closeNav()} className={`hamburger`}>
+                    <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} top`)}></span>
+                    <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} middle`)}></span>
+                    <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} bottom`)}></span>
                 </div>
                 <div className={(`${this.state.active ? 'is-open' : 'null'} nav-panel`)}>
                     <nav>

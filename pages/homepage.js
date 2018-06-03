@@ -32,7 +32,7 @@ class Homepage extends React.Component {
                     </span>
                 </div>
                 <Button
-                link="/ourCollection"
+                link="/ourDesigners"
                 btnClass="primary hero-cta"
                 btnText="Our Collection"
                 btnIcon="fa fa-arrow-right icon"/>

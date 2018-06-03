@@ -5,19 +5,15 @@ import Footer from '../components/Footer';
 import "../static/style.sass"
 
 class Layout extends React.Component {
-    // constructor(){
-    //     super();
-    //     this.state = {
-    //         appointment: false
-    //     }
-    // }
 
     render(){
         return(
             <div>
                 <BookAppointment active={this.props.appointment} />
-                <div className="nav-container"></div>
-                <Navigation />
+                <div className="nav-container">
+                    <span className="logo">Amorae</span>
+                </div>
+                <Navigation theme={this.props.theme}/>
                 {this.props.children}
                 <Footer />
             </div>
