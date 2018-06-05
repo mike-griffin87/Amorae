@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
-import navData from '../static/data/data-navigation';
+import Data from '../static/data/data-navigation';
 import Overlay from '../components/Overlay';
 import BookAppointment from '../components/BookAppointment';
 import "../static/navigation.sass";
@@ -45,6 +45,15 @@ class Navigation extends React.Component {
             appointment: !this.state.appointment
         });
     }
+
+    sale = (id) => {
+        let saleDresses = [];
+          for(let i=0; i < Data[id].dresses.length; i++) {
+            saleDresses.push(Data[id].dresses[i].sale)
+          }
+          let saleFiltered = saleDresses.filter(dress => dress == true);
+          return saleFiltered.length;
+      }
     
     render(){
         if (typeof window !== 'undefined') {
@@ -65,12 +74,17 @@ class Navigation extends React.Component {
                         <Link href="homepage">
                             <li><h2>Home</h2></li>
                         </Link>
-                        <li onClick={() => this.handleDropdown()} className={(`${this.state.navDropdown ? 'is-open' : 'null'} dropdown`)}>
+                        <li 
+                        onClick={() => this.handleDropdown()}
+                        className={(`${this.state.navDropdown ? 'is-open' : 'null'} dropdown`)}>
                             <h2>Our Designers</h2>
                             <ul className={this.state.navDropdown ? 'is-open' : 'null'}>
-                                {navData.map((d, i) => <Link href={d.link}><li key={i}>
-                                    <h2>{d.navTitle}</h2>
-                                    <span>{d.navTagLine}</span>
+                                {Data.map((d, id) =>
+                                <Link key={id} href={d.link}><li>
+                                <h2>{d.title}</h2>
+                                <span className="subtext">{`
+                                ${d.dresses.length === 1 ? d.dresses.length + ' Dress' : d.dresses.length + ' Dresses'} | 
+                                ${this.sale(id) === 1 ? this.sale(id) + ' Sale Dress' :  this.sale(id) + ' Sale Dresses'}`}</span>
                                 </li></Link>)}
                             </ul>
                         </li>

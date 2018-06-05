@@ -101,10 +101,6 @@
         nav ul li h2 {
           padding: 0;
           margin: 0; }
-        nav ul li span {
-          color: #6C6C6C;
-          font-size: 14px;
-          font-style: italic; }
         nav ul li:hover {
           opacity: 1;
           color: #4a4a4a; }
@@ -213,7 +209,8 @@ body {
 
 h1, h2, h3, h4, p {
   margin: 8px 0;
-  padding: 0; }
+  padding: 0;
+  color: #4A4A4A; }
   h1.tab:before, h2.tab:before, h3.tab:before, h4.tab:before, p.tab:before {
     content: '';
     border-left: 4px solid #F5A623;
@@ -221,9 +218,16 @@ h1, h2, h3, h4, p {
     padding-right: 10px; }
 
 h2 {
-  color: #4A4A4A;
   font-size: 26px;
   margin-bottom: 16px; }
+
+h3 {
+  font-size: 18px; }
+
+span.subtext {
+  color: #6C6C6C;
+  font-size: 14px;
+  font-style: italic; }
 
 p {
   line-height: 26px;
@@ -263,52 +267,99 @@ img {
   position: relative;
   padding: 0 40px;
   z-index: 10; }
-.hero {
-  background-image: url("/../static/images/hero.jpg");
-  background-size: cover;
-  background-position: top center;
+.designer-card {
   width: 100%;
-  height: 80vh;
+  height: 350px;
+  margin-top: 56px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
   position: relative; }
-  .hero:before {
+  .designer-card .sale-badge {
+    display: none; }
+    .designer-card .sale-badge.is-showing {
+      background: #CB2539;
+      color: white;
+      display: inline-block; }
+  .designer-card .designer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    background: white;
+    position: absolute;
+    bottom: 24px;
+    border-radius: 3px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer; }
+    .designer-card .designer-info:hover .icon h1 {
+      transform: translateX(4px); }
+    .designer-card .designer-info h3, .designer-card .designer-info p {
+      margin: 0; }
+  .designer-card .text {
+    margin-left: 32px; }
+  .designer-card .icon {
+    background: #F5A623;
+    height: 100%;
+    display: block;
+    padding: 10px 20px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    .designer-card .icon h1 {
+      transition: all .15s ease-in-out;
+      color: #724802;
+      font-size: 26px; }
+.dresses-container {
+  display: flex;
+  text-align: center; }
+  .dresses-container ul {
+    margin: 0;
+    padding: 0; }
+    .dresses-container ul li {
+      list-style: none;
+      padding: 0 8px;
+      display: inline-block; }
+
+.dress-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 56px;
+  border-radius: 4px; }
+  .dress-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    z-index: 5;
+    position: relative;
+    transition: all 1.8s ease-in-out;
+    cursor: pointer; }
+    .dress-card img:hover {
+      transform: scale(1.2); }
+  .dress-card .dress-info {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    z-index: 10; }
+    .dress-card .dress-info h2 {
+      color: white; }
+
+.dress-cover {
+  pointer-events: none; }
+  .dress-cover:after {
     content: '';
+    border-radius: 4px;
+    position: absolute;
+    display: block;
+    top: 56px;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 8;
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); }
-
-.primary.hero-cta {
-  position: absolute;
-  right: 10%;
-  top: 72%; }
-
-.hero-wave {
-  position: relative;
-  z-index: 5; }
-  .hero-wave img {
-    width: 100%;
-    position: relative;
-    top: 91%; }
-
-.main-body .img-container {
-  border-radius: 4px;
-  display: block;
-  position: relative; }
-  .main-body .img-container img {
-    border-radius: 4px;
-    margin-bottom: 24px; }
-  .main-body .img-container:before {
-    content: '';
-    position: absolute;
-    top: calc(50% - 50% / 2);
-    left: -20%;
-    width: 150%;
-    height: 50%;
-    background: rgba(245, 166, 35, 0.3);
-    color: red;
-    z-index: 0; }
 
 /*# sourceMappingURL=style.css.map*/
