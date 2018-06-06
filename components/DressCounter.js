@@ -1,16 +1,27 @@
+import React from 'react';
 import Data from '../static/data/data-navigation';
 
-sale = (id) => {
-    let saleDresses = [];
-      for(let i=0; i < Data[id].dresses.length; i++) {
-        saleDresses.push(Data[id].dresses[i].sale)
-      }
-      let saleFiltered = saleDresses.filter(dress => dress == true);
-      return saleFiltered.length;
+class DressCounter extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      dresses: 0,
+      text: 'Dresses'
+    }
   }
 
-const DressCounter = () => (
-    sale(0)
-)
+  componentWillMount(){
+    let dressCount = Data[this.props.id].dresses.length;
+    dressCount == 1 ? this.setState({text: 'dress'}) : this.setState({text: 'dresses'});
+    this.setState({dresses: dressCount})
+  }
+
+  render(){
+    
+      return(
+        <span className="sub-text">{this.state.dresses} {this.state.text}</span>
+      )
+  }
+}
 
 export default DressCounter

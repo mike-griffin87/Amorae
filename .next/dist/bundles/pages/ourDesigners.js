@@ -386,6 +386,84 @@ var DesignerCard = function DesignerCard(props) {
 
 /***/ }),
 
+/***/ "./components/DressCounter.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation__ = __webpack_require__("./static/data/data-navigation.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation__);
+var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/DressCounter.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var DressCounter =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(DressCounter, _React$Component);
+
+  function DressCounter() {
+    var _this;
+
+    _classCallCheck(this, DressCounter);
+
+    _this = _possibleConstructorReturn(this, (DressCounter.__proto__ || Object.getPrototypeOf(DressCounter)).call(this));
+    _this.state = {
+      dresses: 0,
+      text: 'Dresses'
+    };
+    return _this;
+  }
+
+  _createClass(DressCounter, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var dressCount = __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation___default.a[this.props.id].dresses.length;
+      dressCount == 1 ? this.setState({
+        text: 'dress'
+      }) : this.setState({
+        text: 'dresses'
+      });
+      this.setState({
+        dresses: dressCount
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
+        className: "sub-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        }
+      }, this.state.dresses, " ", this.state.text);
+    }
+  }]);
+
+  return DressCounter;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (DressCounter);
+
+/***/ }),
+
 /***/ "./components/Footer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -861,8 +939,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_DesignerCard__ = __webpack_require__("./components/DesignerCard.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation__ = __webpack_require__("./static/data/data-navigation.json");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_DressCounter__ = __webpack_require__("./components/DressCounter.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation__ = __webpack_require__("./static/data/data-navigation.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation__);
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/pages/ourDesigners.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -878,6 +957,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -907,8 +987,8 @@ function (_React$Component) {
       value: function value(id) {
         var saleDresses = [];
 
-        for (var i = 0; i < __WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation___default.a[id].dresses.length; i++) {
-          saleDresses.push(__WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation___default.a[id].dresses[i].sale);
+        for (var i = 0; i < __WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation___default.a[id].dresses.length; i++) {
+          saleDresses.push(__WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation___default.a[id].dresses[i].sale);
         }
 
         var saleFiltered = saleDresses.filter(function (dress) {
@@ -922,47 +1002,51 @@ function (_React$Component) {
   _createClass(ourDesigners, [{
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {
         theme: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 20
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "main-body page-vs-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "tab",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         }
       }, "Our Designers"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         }
       }, "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui."), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "designer-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         }
-      }, __WEBPACK_IMPORTED_MODULE_3__static_data_data_navigation___default.a.map(function (d, id) {
+      }, __WEBPACK_IMPORTED_MODULE_4__static_data_data_navigation___default.a.map(function (d, id) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_DesignerCard__["a" /* default */], {
           key: id,
           title: d.title,
-          dresses: "".concat(d.dresses.length === 1 ? d.dresses.length + ' Dress' : d.dresses.length + ' Dresses', " | \n                ").concat(_this2.sale(id) === 1 ? _this2.sale(id) + ' Sale Dress' : _this2.sale(id) + ' Sale Dresses'),
+          dresses: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_DressCounter__["a" /* default */], {
+            id: id,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            }
+          }),
           link: d.link,
           bg: d.bg,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 26
           }
         });
       }))));

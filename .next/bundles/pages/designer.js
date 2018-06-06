@@ -328,30 +328,30 @@ var DressCard = function DressCard(props) {
     src: props.bg,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     className: "jsx-3868072199"
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     className: "jsx-3868072199" + " " + "dress-cover"
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     className: "jsx-3868072199" + " " + "dress-info"
   }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     className: "jsx-3868072199"
   }, props.name)), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
     styleId: "3868072199",
-    css: ".dress-card.jsx-3868072199{background:url('".concat('test', "');background-position:top center;background-size:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVVnQixBQUc0RCwrQ0FDaEIsK0JBQ1Qsc0JBQzFCIiwiZmlsZSI6ImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9taWNoYWVsZ3JpZmZpbi9Eb2N1bWVudHMvQ2xpZW50cy9BbW9yYWUgQnJpZGFsLzAyX1Byb2plY3RzL1dlYnNpdGUgcmVkZXNpZ24gMjAxOC8wM19EZXZlbG9wbWVudC9BbW9yYWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCIuLi9zdGF0aWMvZHJlc3MtY2FyZC5zYXNzXCI7XG5cbmNvbnN0IERyZXNzQ2FyZCA9IChwcm9wcykgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiZHJlc3MtY2FyZFwiPlxuICAgICAgICA8aW1nIHNyYz17cHJvcHMuYmd9IC8+XG4gICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImRyZXNzLWNvdmVyXCIgPjwvc3Bhbj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkcmVzcy1pbmZvXCI+XG4gICAgICAgICAgICA8aDI+e3Byb3BzLm5hbWV9PC9oMj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICAgIC5kcmVzcy1jYXJkIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6IHVybCgnJHsndGVzdCd9Jyk7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiB0b3AgY2VudGVyO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsgXG4gICAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG4pXG5cbmV4cG9ydCBkZWZhdWx0IERyZXNzQ2FyZDsiXX0= */\n/*@ sourceURL=components/DressCard.js */")
+    css: ".dress-card.jsx-3868072199{background:url('".concat('test', "');background-position:top center;background-size:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVdnQixBQUc0RCwrQ0FDaEIsK0JBQ1Qsc0JBQzFCIiwiZmlsZSI6ImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9taWNoYWVsZ3JpZmZpbi9Eb2N1bWVudHMvQ2xpZW50cy9BbW9yYWUgQnJpZGFsLzAyX1Byb2plY3RzL1dlYnNpdGUgcmVkZXNpZ24gMjAxOC8wM19EZXZlbG9wbWVudC9BbW9yYWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCIuLi9zdGF0aWMvZHJlc3MtY2FyZC5zYXNzXCI7XG5cbmNvbnN0IERyZXNzQ2FyZCA9IChwcm9wcykgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiZHJlc3MtY2FyZFwiPlxuICAgICAgICBcbiAgICAgICAgPGltZyBzcmM9e3Byb3BzLmJnfSAvPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJkcmVzcy1jb3ZlclwiID48L3NwYW4+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZHJlc3MtaW5mb1wiPlxuICAgICAgICAgICAgPGgyPntwcm9wcy5uYW1lfTwvaDI+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuZHJlc3MtY2FyZCB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiB1cmwoJyR7J3Rlc3QnfScpO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogdG9wIGNlbnRlcjtcbiAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7IFxuICAgICAgICB9XG4gICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBEcmVzc0NhcmQ7Il19 */\n/*@ sourceURL=components/DressCard.js */")
   }));
 };
 
@@ -2985,7 +2985,7 @@ var Content = function Content(props) {
       fileName: _jsxFileName,
       lineNumber: 16
     }
-  }, props.getCover), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+  }, d.blurb), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
     className: "dresses-container",
     __source: {
       fileName: _jsxFileName,

@@ -2,6 +2,7 @@ import "../static/dress-card.sass";
 
 const DressCard = (props) => (
     <div className="dress-card">
+        
         <img src={props.bg} />
         <span className="dress-cover" ></span>
         <div className="dress-info">

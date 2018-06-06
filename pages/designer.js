@@ -13,7 +13,7 @@ const Content = (props) => (
 
   <div>
     <h1 className="tab">{d.title}</h1>
-    <p>{props.getCover}</p>
+    <p>{d.blurb}</p>
     <div className="dresses-container">
         <ul>
             {d.dresses.map((d, id) => <li><DressCard
