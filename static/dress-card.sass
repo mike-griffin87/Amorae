@@ -9,11 +9,15 @@
             list-style: none
             padding: 0 8px
             display: inline-block
+
+.dress-container
+    position: relative
+    margin-top: 56px
+    border-radius: 4px
     
 .dress-card
     position: relative
     overflow: hidden
-    margin-top: 56px
     border-radius: 4px
 
     img
@@ -24,7 +28,7 @@
         border-radius: 4px
         z-index: 5
         position: relative
-        transition: all 2.5s ease-in-out
+        transition: all 5s ease-in-out
         cursor: pointer
 
         &:hover
@@ -38,8 +42,9 @@
 
         h2
             color: white
+            margin-bottom: 0
 
-.dress-cover
+.dress-overlay
     pointer-events: none
 
     &:after
@@ -65,3 +70,13 @@
     left: 0
     width: 100%
     height: auto
+
+.sale-info
+    display: none
+    color: white!important
+    span
+        display: inline-block
+        padding: 0 10px
+
+    &.is-showing
+        display: block

@@ -313,49 +313,87 @@ var Button = function Button(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_dress_card_sass__ = __webpack_require__("./static/dress-card.sass");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_dress_card_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_dress_card_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_SaleBadge__ = __webpack_require__("./components/SaleBadge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_dress_card_sass__ = __webpack_require__("./static/dress-card.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__static_dress_card_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__static_dress_card_sass__);
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/DressCard.js";
 
 
 
 
+
 var DressCard = function DressCard(props) {
-  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    className: "jsx-3868072199" + " " + "dress-card"
-  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("img", {
-    src: props.bg,
+      lineNumber: 5
+    }
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    className: "dress-container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
-    },
-    className: "jsx-3868072199"
-  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
+    }
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_SaleBadge__["a" /* default */], {
+    onSale: props.onSale,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
-    },
-    className: "jsx-3868072199" + " " + "dress-cover"
+    }
   }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    onClick: props.onClick,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
-    className: "jsx-3868072199" + " " + "dress-info"
-  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
+    className: "jsx-1982039606" + " " + "dress-card"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("img", {
+    src: props.bg,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
-    className: "jsx-3868072199"
-  }, props.name)), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
-    styleId: "3868072199",
-    css: ".dress-card.jsx-3868072199{background:url('".concat('test', "');background-position:top center;background-size:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVdnQixBQUc0RCwrQ0FDaEIsK0JBQ1Qsc0JBQzFCIiwiZmlsZSI6ImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9taWNoYWVsZ3JpZmZpbi9Eb2N1bWVudHMvQ2xpZW50cy9BbW9yYWUgQnJpZGFsLzAyX1Byb2plY3RzL1dlYnNpdGUgcmVkZXNpZ24gMjAxOC8wM19EZXZlbG9wbWVudC9BbW9yYWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgXCIuLi9zdGF0aWMvZHJlc3MtY2FyZC5zYXNzXCI7XG5cbmNvbnN0IERyZXNzQ2FyZCA9IChwcm9wcykgPT4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiZHJlc3MtY2FyZFwiPlxuICAgICAgICBcbiAgICAgICAgPGltZyBzcmM9e3Byb3BzLmJnfSAvPlxuICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJkcmVzcy1jb3ZlclwiID48L3NwYW4+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZHJlc3MtaW5mb1wiPlxuICAgICAgICAgICAgPGgyPntwcm9wcy5uYW1lfTwvaDI+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuZHJlc3MtY2FyZCB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiB1cmwoJyR7J3Rlc3QnfScpO1xuICAgICAgICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogdG9wIGNlbnRlcjtcbiAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7IFxuICAgICAgICB9XG4gICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBEcmVzc0NhcmQ7Il19 */\n/*@ sourceURL=components/DressCard.js */")
-  }));
+    className: "jsx-1982039606"
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    className: "jsx-1982039606" + " " + "dress-overlay"
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    className: "jsx-1982039606" + " " + "dress-info"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    className: "jsx-1982039606"
+  }, props.name), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    className: "jsx-1982039606" + " " + "subtext sale-info ".concat(props.onSale ? 'is-showing' : 'null')
+  }, "Colour: ", props.colour, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    className: "jsx-1982039606"
+  }, "Size: ", props.size), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    className: "jsx-1982039606"
+  }, "Price: ", props.price))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
+    styleId: "1982039606",
+    css: ".dress-card.jsx-1982039606{background:url('".concat('test', "');background-position:top center;background-size:cover;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvRHJlc3NDYXJkLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQW9Cb0IsQUFHZ0UsK0NBQ2hCLCtCQUNULHNCQUMxQiIsImZpbGUiOiJjb21wb25lbnRzL0RyZXNzQ2FyZC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvbWljaGFlbGdyaWZmaW4vRG9jdW1lbnRzL0NsaWVudHMvQW1vcmFlIEJyaWRhbC8wMl9Qcm9qZWN0cy9XZWJzaXRlIHJlZGVzaWduIDIwMTgvMDNfRGV2ZWxvcG1lbnQvQW1vcmFlIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFNhbGVCYWRnZSBmcm9tICcuLi9jb21wb25lbnRzL1NhbGVCYWRnZSc7XG5pbXBvcnQgXCIuLi9zdGF0aWMvZHJlc3MtY2FyZC5zYXNzXCI7XG5cbmNvbnN0IERyZXNzQ2FyZCA9IChwcm9wcykgPT4gKFxuICAgIDxSZWFjdC5GcmFnbWVudD5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkcmVzcy1jb250YWluZXJcIj5cbiAgICAgICAgICAgIDxTYWxlQmFkZ2Ugb25TYWxlPXtwcm9wcy5vblNhbGV9IC8+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImRyZXNzLWNhcmRcIiBvbkNsaWNrPXtwcm9wcy5vbkNsaWNrfT5cbiAgICAgICAgICAgIDxpbWcgc3JjPXtwcm9wcy5iZ30gLz5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImRyZXNzLW92ZXJsYXlcIj48L3NwYW4+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImRyZXNzLWluZm9cIj5cbiAgICAgICAgICAgICAgICA8aDI+e3Byb3BzLm5hbWV9PC9oMj5cbiAgICAgICAgICAgICAgICA8c3BhblxuICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9eyhgc3VidGV4dCBzYWxlLWluZm8gJHtwcm9wcy5vblNhbGUgPyAnaXMtc2hvd2luZycgOiAnbnVsbCd9YCl9PlxuICAgICAgICAgICAgICAgICAgICBDb2xvdXI6IHtwcm9wcy5jb2xvdXJ9XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuPlNpemU6IHtwcm9wcy5zaXplfTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4+UHJpY2U6IHtwcm9wcy5wcmljZX08L3NwYW4+XG4gICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAgICAgLmRyZXNzLWNhcmQge1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IHVybCgnJHsndGVzdCd9Jyk7XG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1wb3NpdGlvbjogdG9wIGNlbnRlcjtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyOyBcbiAgICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgPC9SZWFjdC5GcmFnbWVudD5cbilcblxuZXhwb3J0IGRlZmF1bHQgRHJlc3NDYXJkOyJdfQ== */\n/*@ sourceURL=components/DressCard.js */")
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (DressCard);
@@ -828,6 +866,187 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./components/SaleBadge.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_sale_badge_sass__ = __webpack_require__("./static/sale-badge.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_sale_badge_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_sale_badge_sass__);
+var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/SaleBadge.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var SaleBadge =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SaleBadge, _React$Component);
+
+  function SaleBadge() {
+    _classCallCheck(this, SaleBadge);
+
+    return _possibleConstructorReturn(this, (SaleBadge.__proto__ || Object.getPrototypeOf(SaleBadge)).apply(this, arguments));
+  }
+
+  _createClass(SaleBadge, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "sale-badge ".concat(this.props.onSale ? 'is-showing' : 'null'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h4", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      }, "Sale"));
+    }
+  }]);
+
+  return SaleBadge;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["a"] = (SaleBadge);
+
+/***/ }),
+
+/***/ "./components/SimpleSlider.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_slick__ = __webpack_require__("react-slick");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_slick___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_slick__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_slider_sass__ = __webpack_require__("./static/slider.sass");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_slider_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_slider_sass__);
+var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/components/SimpleSlider.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var SimpleSlider =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SimpleSlider, _React$Component);
+
+  function SimpleSlider() {
+    _classCallCheck(this, SimpleSlider);
+
+    return _possibleConstructorReturn(this, (SimpleSlider.__proto__ || Object.getPrototypeOf(SimpleSlider)).apply(this, arguments));
+  }
+
+  _createClass(SimpleSlider, [{
+    key: "render",
+    value: function render() {
+      var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_slick___default.a, _extends({}, settings, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        src: "../static/images/RonaldJoyce/Ada_a.jpg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        src: "../static/images/RonaldJoyce/Ada_b.jpg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        }
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+        src: "../static/images/RonaldJoyce/Ada_c.jpg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        }
+      }))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "dress-details",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        }
+      }, this.props.dressName)));
+    }
+  }]);
+
+  return SimpleSlider;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (SimpleSlider);
+
+/***/ }),
+
 /***/ "./pages/designer.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -838,7 +1057,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation__ = __webpack_require__("./static/data/data-navigation.json");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_DressCard__ = __webpack_require__("./components/DressCard.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Layout__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_SimpleSlider__ = __webpack_require__("./components/SimpleSlider.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Layout__ = __webpack_require__("./components/Layout.js");
 var _jsxFileName = "/Users/michaelgriffin/Documents/Clients/Amorae Bridal/02_Projects/Website redesign 2018/03_Development/Amorae/pages/designer.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -859,90 +1079,85 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var d = {};
 
-var Content = function Content(props) {
-  return __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation___default.a.map(function (designer) {
-    if (designer.title === props.url.query.designer) {
-      d = designer;
-    }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
-    className: "tab",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    }
-  }, d.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    }
-  }, d.blurb), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-    className: "dresses-container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    }
-  }, d.dresses.map(function (d, id) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("li", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_DressCard__["a" /* default */], {
-      key: id,
-      bg: d.images[0].path,
-      name: d.name,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      }
-    }));
-  }))));
-};
 
 var Designer =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(Designer, _React$Component);
 
-  function Designer() {
+  function Designer(props) {
+    var _this;
+
     _classCallCheck(this, Designer);
 
-    return _possibleConstructorReturn(this, (Designer.__proto__ || Object.getPrototypeOf(Designer)).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, (Designer.__proto__ || Object.getPrototypeOf(Designer)).call(this, props));
+    _this.state = {
+      title: '',
+      blurb: '',
+      sale: false,
+      dresses: {}
+    };
+    return _this;
   }
 
   _createClass(Designer, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      __WEBPACK_IMPORTED_MODULE_1__static_data_data_navigation___default.a.map(function (designer) {
+        if (designer.title === _this2.props.url.query.designer) {
+          _this2.setState({
+            title: designer.title,
+            blurb: designer.blurb,
+            sale: designer.sale,
+            dresses: designer.dresses
+          });
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Layout__["a" /* default */], {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Layout__["a" /* default */], {
+        url: this.props.url,
         theme: "dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 32
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "main-body page-vs-nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 33
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Content, {
-        url: this.props.url,
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        className: "tab",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 34
         }
+      }, this.state.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        }
+      }, this.state.blurb), this.state.dresses.map(function (d, id) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_DressCard__["a" /* default */], {
+          key: id,
+          onSale: d.sale,
+          bg: d.images[0].path,
+          name: d.name,
+          colour: d.colour,
+          size: d.size,
+          price: d.price,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37
+          }
+        });
       })));
     }
   }]);
@@ -971,7 +1186,7 @@ function (_React$Component) {
 /***/ "./static/data/data-navigation.json":
 /***/ (function(module, exports) {
 
-module.exports = [{"title":"Ronald Joyce","blurb":"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.","bg":"./static/images/hero.jpg","dresses":[{"name":"Ada","sale":true,"images":[{"path":"./static/images/RonaldJoyce/Ada_a.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Ada_b.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Ada_c.jpg","cover":false}]},{"name":"Adele","sale":true,"images":[{"path":"./static/images/RonaldJoyce/Adele_a.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Adele_b.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Adele_c.jpg","cover":false}]},{"name":"Ainsley","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Ainsley_a.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Ainsley_b.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Ainsley_c.jpg","cover":false}]},{"name":"Alicia","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Alicia_a.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Alicia_b.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Alicia_c.jpg","cover":false}]},{"name":"Alison","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Alison_a.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Alison_b.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Alison_c.jpg","cover":false}]},{"name":"Alix","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Alix_a.jpg","cover":true},{"path":"./static/images/RonaldJoyce/Alix_b.jpg","cover":false},{"path":"./static/images/RonaldJoyce/Alix_c.jpg","cover":false}]}]}]
+module.exports = [{"title":"Ronald Joyce","blurb":"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.","bg":"./static/images/hero.jpg","dresses":[{"name":"Ada","sale":true,"colour":"White","size":"UK14","price":"£999.99","images":[{"path":"./static/images/RonaldJoyce/Ada_a.jpg"},{"path":"./static/images/RonaldJoyce/Ada_b.jpg"},{"path":"./static/images/RonaldJoyce/Ada_c.jpg"}]},{"name":"Adele","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Adele_a.jpg"},{"path":"./static/images/RonaldJoyce/Adele_b.jpg"},{"path":"./static/images/RonaldJoyce/Adele_c.jpg"}]},{"name":"Ainsley","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Ainsley_a.jpg"},{"path":"./static/images/RonaldJoyce/Ainsley_b.jpg"},{"path":"./static/images/RonaldJoyce/Ainsley_c.jpg"}]},{"name":"Alicia","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Alicia_a.jpg"},{"path":"./static/images/RonaldJoyce/Alicia_b.jpg"},{"path":"./static/images/RonaldJoyce/Alicia_c.jpg"}]},{"name":"Alison","sale":true,"images":[{"path":"./static/images/RonaldJoyce/Alison_a.jpg"},{"path":"./static/images/RonaldJoyce/Alison_b.jpg"},{"path":"./static/images/RonaldJoyce/Alison_c.jpg"}]},{"name":"Alix","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Alix_a.jpg"},{"path":"./static/images/RonaldJoyce/Alix_b.jpg"},{"path":"./static/images/RonaldJoyce/Alix_c.jpg"}]}]},{"title":"test Joyce","blurb":"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.","bg":"./static/images/hero.jpg","dresses":[{"name":"Ada","sale":true,"images":[{"path":"./static/images/RonaldJoyce/Ada_a.jpg"},{"path":"./static/images/RonaldJoyce/Ada_b.jpg"},{"path":"./static/images/RonaldJoyce/Ada_c.jpg"}]},{"name":"Adele","sale":false,"images":[{"path":"./static/images/RonaldJoyce/Adele_a.jpg"},{"path":"./static/images/RonaldJoyce/Adele_b.jpg"},{"path":"./static/images/RonaldJoyce/Adele_c.jpg"}]}]}]
 
 /***/ }),
 
@@ -990,6 +1205,20 @@ module.exports = [{"title":"Ronald Joyce","blurb":"Cras mattis consectetur purus
 /***/ }),
 
 /***/ "./static/overlay.sass":
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./static/sale-badge.sass":
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./static/slider.sass":
 /***/ (function(module, exports) {
 
 
@@ -1022,6 +1251,13 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-slick":
+/***/ (function(module, exports) {
+
+module.exports = require("react-slick");
 
 /***/ }),
 
