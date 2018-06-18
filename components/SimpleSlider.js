@@ -15,17 +15,8 @@ class SimpleSlider extends React.Component {
     return (
       <React.Fragment>
         <Slider {...settings}>
-          <div>
-            <img src="../static/images/RonaldJoyce/Ada_a.jpg" />
-          </div>
-          <div>
-          <img src="../static/images/RonaldJoyce/Ada_b.jpg" />
-          </div>
-          <div>
-          <img src="../static/images/RonaldJoyce/Ada_c.jpg" />
-          </div>
+          {this.props.sliderContent}
         </Slider>
-        <div className="dress-details"><h2>{this.props.dressName}</h2></div>
       </React.Fragment>
     );
   }

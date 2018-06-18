@@ -1,7 +1,7 @@
 import React from 'react';
 import "../static/booking.sass";
 import Button from '../components/Button';
-import Overlay from '../components/Overlay';
+import Link from 'next/link';
 
 class BookAppointment extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class BookAppointment extends React.Component {
 
     render(){
         return(
-            <div>
+            <React.Fragment>
                 <div className={`booking-card ${this.props.active ? 'is-open' : 'null'}`}>
                     <div className="text-content">
                         <h2>Book an Appointment</h2>
@@ -54,11 +54,17 @@ class BookAppointment extends React.Component {
                         onChange={e => this.setState({message: e.target.value})}></textarea> 
                     </form>
                     <div className="form-controls">
-                        <Button btnClass="secondary no-icon" btnText="Cancel" />
+                        <Button onClick={this.props.CancelClick} btnClass="secondary no-icon" btnText="Cancel" />
                         <Button btnClass="primary no-icon" btnText="Send" />
                     </div>
+                    <div className="link-container">
+                    <Link href="/contact"><p>
+                        <a>View our opening hours</a>
+                        </p>
+                    </Link>
+                    </div>
                 </div>
-            </div>
+            </ React.Fragment>
         )
     }
 }

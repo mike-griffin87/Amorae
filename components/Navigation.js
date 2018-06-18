@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Data from '../static/data/data-navigation';
 import Overlay from '../components/Overlay';
 import BookAppointment from '../components/BookAppointment';
+import DressCounter from '../components/DressCounter';
 import "../static/navigation.sass";
 
 
@@ -45,15 +46,6 @@ class Navigation extends React.Component {
             appointment: !this.state.appointment
         });
     }
-
-    sale = (id) => {
-        let saleDresses = [];
-          for(let i=0; i < Data[id].dresses.length; i++) {
-            saleDresses.push(Data[id].dresses[i].sale)
-          }
-          let saleFiltered = saleDresses.filter(dress => dress == true);
-          return saleFiltered.length;
-      }
     
     render(){
         if (typeof window !== 'undefined') {
@@ -61,7 +53,10 @@ class Navigation extends React.Component {
         }        
         return(
             <div>
-                <BookAppointment active={this.state.appointment}/>
+                <BookAppointment
+                    active={this.state.appointment}
+                    CancelClick={() => this.closeOverlay()}
+                />
                 <Overlay coverNav={this.state.appointment} overlay={this.state.overlay} onClick={() => this.closeOverlay()} />
                 <div onClick={() => this.closeNav()} className={`hamburger`}>
                     <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} top`)}></span>
@@ -82,14 +77,15 @@ class Navigation extends React.Component {
                                 {Data.map((d, id) =>
                                 <Link key={id} href={d.link}><li>
                                 <h2>{d.title}</h2>
-                                <span className="subtext">{`
-                                ${d.dresses.length === 1 ? d.dresses.length + ' Dress' : d.dresses.length + ' Dresses'} | 
-                                ${this.sale(id) === 1 ? this.sale(id) + ' Sale Dress' :  this.sale(id) + ' Sale Dresses'}`}</span>
+                                <DressCounter id={id} />
                                 </li></Link>)}
+                                
                             </ul>
                         </li>
                         <li>
-                            <h2>Sample Sale</h2>
+                            <Link href="/salePage">
+                                <h2>Sample Sale</h2>
+                            </Link>
                         </li>
                         <li>
                             <h2 onClick={() => this.openAppointment()}>Book an Appointment</h2>

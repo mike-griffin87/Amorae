@@ -1,10 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import Button from '../components/Button';
 import Overlay from '../components/Overlay';
 import "../static/homepage.sass";
-import BookAppointment from '../components/BookAppointment';
-
 
 
 class Homepage extends React.Component {
@@ -21,7 +20,7 @@ class Homepage extends React.Component {
 
     render(){
         return (
-            <Layout appointment={this.state.appointment}>
+            <Layout CancelClick={() => this.handleAppointment()} appointment={this.state.appointment}>
                 <Overlay
                     onClick={() => this.handleAppointment()}
                     overlay={this.state.appointment}
@@ -31,11 +30,13 @@ class Homepage extends React.Component {
                     <img src="../static/images/hero-wave.svg" />
                     </span>
                 </div>
+                <Link href="ourDesigners">
                 <Button
-                link="/ourDesigners"
-                btnClass="primary hero-cta"
-                btnText="Our Collection"
-                btnIcon="fa fa-arrow-right icon"/>
+                    btnClass="primary hero-cta"
+                    btnText="Our Collection"
+                    btnIcon="fa fa-arrow-right icon"
+                />
+                </Link>
                 <section className="main-body">
                     <h2 className="tab">About Amorae</h2>
                     <div className="img-container">

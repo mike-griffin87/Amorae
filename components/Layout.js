@@ -9,7 +9,7 @@ class Layout extends React.Component {
     render(){
         return(
             <div>
-                <BookAppointment active={this.props.appointment} />
+                <BookAppointment CancelClick={this.props.CancelClick} active={this.props.appointment} />
                 <div className="nav-container">
                     <span className="logo">Amorae</span>
                 </div>

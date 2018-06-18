@@ -25,7 +25,7 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869598");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563593");
           });
       }
     }
@@ -58,7 +58,7 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869611");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563608");
           });
       }
     }
@@ -66,7 +66,7 @@ webpackHotUpdate(0,{
 
 /***/ }),
 
-/***/ "./static/designer-card.sass":
+/***/ "./static/dress-card.sass":
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin;
@@ -91,7 +91,40 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869575");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563643");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./static/dropdown-button.sass":
+/***/ (function(module, exports, __webpack_require__) {
+
+// removed by extract-text-webpack-plugin;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563570");
           });
       }
     }
@@ -124,7 +157,7 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869624");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563625");
           });
       }
     }
@@ -157,7 +190,40 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869605");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563631");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./static/sale-badge.sass":
+/***/ (function(module, exports, __webpack_require__) {
+
+// removed by extract-text-webpack-plugin;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563653");
           });
       }
     }
@@ -190,7 +256,7 @@ webpackHotUpdate(0,{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1528416869588");
+            injectCss(link, link.href.split("?")[0] + "?unix=1529291563584");
           });
       }
     }

@@ -11,9 +11,15 @@ class Designer extends React.Component {
             title: '',
             blurb: '',
             sale: false,
-            dresses: {}
+            dresses: {},
+            sliderContent: []
         }
     }
+
+    handleClick(e) {
+        console.log(e.target)
+    }
+
         componentWillMount() {
             Data.map((designer) => {
             if (designer.title === this.props.url.query.designer){
@@ -30,6 +36,7 @@ class Designer extends React.Component {
     render() {
       return (
           <Layout url={this.props.url} theme="dark">
+            <SimpleSlider sliderContent={this.state.sliderContent} />
             <div className="main-body page-vs-nav">
                 <h1 className="tab">{this.state.title}</h1>
                 <p>{this.state.blurb}</p>
@@ -42,6 +49,7 @@ class Designer extends React.Component {
                         colour={d.colour}
                         size={d.size}
                         price={d.price}
+                        onClick={(e) => this.handleClick(e)}
                     />
                 )}
             </div>

@@ -12,9 +12,8 @@ const DressCard = (props) => (
                 <h2>{props.name}</h2>
                 <span
                     className={(`subtext sale-info ${props.onSale ? 'is-showing' : 'null'}`)}>
-                    Colour: {props.colour}
-                    <span>Size: {props.size}</span>
-                    <span>Price: {props.price}</span>
+                    {/* Colour: {props.colour} */}
+                    <span>{props.size}, {props.price} <strong>{props.salePrice}</strong></span>
                 </span>
             </div>
 
