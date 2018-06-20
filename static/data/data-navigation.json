@@ -498,12 +498,6 @@
                 {"path": "./static/images/LaSposa/petra_c.jpg"}
                 ]},
 
-            {"name": "Petra", "sale": false, "images":[
-                {"path": "./static/images/LaSposa/petra_a.jpg"},
-                {"path": "./static/images/LaSposa/petra_b.jpg"},
-                {"path": "./static/images/LaSposa/petra_c.jpg"}
-                ]},
-
             {"name": "Profeta", "sale": false, "images":[
                 {"path": "./static/images/LaSposa/profeta_a.jpg"},
                 {"path": "./static/images/LaSposa/profeta_b.jpg"},

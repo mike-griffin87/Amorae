@@ -19,12 +19,14 @@
 .booking-card {
   width: 90%;
   height: auto;
+  height: 90vh;
   margin-left: 5%;
   padding: 40px 0 4px 0;
   background: white;
   position: fixed;
+  overflow-y: scroll;
   border-radius: 4px;
-  top: 8%;
+  top: 4%;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
@@ -149,7 +151,7 @@
     display: block;
     width: 32px;
     height: 25px;
-    position: fixed;
+    position: absolute;
     top: 16px;
     right: 40px;
     display: flex;
@@ -214,13 +216,16 @@ body {
   background: transparent;
   width: 100%;
   height: 60px;
-  position: fixed;
+  position: absolute;
   top: 0;
   display: flex;
   align-items: center;
   z-index: 80; }
+  .nav-container.dark {
+    background: #efefef;
+    position: fixed; }
   .nav-container .logo {
-    margin-left: 40px;
+    margin-left: 32px;
     color: #F5A623;
     text-transform: uppercase;
     font-family: Niconne;
@@ -317,23 +322,25 @@ img {
     position: relative;
     top: 91%; }
 
-.main-body .img-container {
-  border-radius: 4px;
-  display: block;
-  position: relative; }
-  .main-body .img-container img {
+.main-body {
+  overflow-x: hidden; }
+  .main-body .img-container {
     border-radius: 4px;
-    margin-bottom: 24px; }
-  .main-body .img-container:before {
-    content: '';
-    position: absolute;
-    top: calc(50% - 50% / 2);
-    left: -20%;
-    width: 150%;
-    height: 50%;
-    background: rgba(245, 166, 35, 0.3);
-    color: red;
-    z-index: 0; }
+    display: block;
+    position: relative; }
+    .main-body .img-container img {
+      border-radius: 4px;
+      margin-bottom: 24px; }
+    .main-body .img-container:before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 50% / 2);
+      left: -20%;
+      width: 150%;
+      height: 50%;
+      background: rgba(245, 166, 35, 0.3);
+      color: red;
+      z-index: 0; }
 .sale-badge {
   display: none;
   position: absolute;
@@ -425,11 +432,14 @@ img {
 .top-content {
   display: block;
   z-index: 15;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  position: relative;
+  padding: 0 40px 40px 40px; }
 
 .dropdown-btn {
   height: 48px;
   padding: 2px 16px;
+  margin-top: 8px;
   color: #724802;
   border: 2px solid #724802;
     border-radius: 3px;
@@ -438,7 +448,10 @@ img {
   right: 40px;
   text-align: left;
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  background: white; }
+  .dropdown-btn:focus {
+    outline: none; }
   .dropdown-btn .icon {
     padding: 0 0 0 16px; }
   .dropdown-btn .no-icon {
@@ -454,6 +467,7 @@ img {
   width: calc(100% + 4px);
   right: -2px;
   display: none;
+  z-index: 50;
   border: 2px solid #724802;
     border-radius: 3px; }
   .sort-dropdown.is-showing {

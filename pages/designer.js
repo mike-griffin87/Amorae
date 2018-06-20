@@ -11,7 +11,7 @@ class Designer extends React.Component {
             title: '',
             blurb: '',
             sale: false,
-            dresses: {},
+            dresses: [],
             sliderContent: []
         }
     }
@@ -22,21 +22,31 @@ class Designer extends React.Component {
 
         componentWillMount() {
             Data.map((designer) => {
-            if (designer.title === this.props.url.query.designer){
-                this.setState({
-                    title: designer.title,
-                    blurb: designer.blurb,
-                    sale: designer.sale,
-                    dresses: designer.dresses
-                });
-            }
+                if (designer.title === this.props.url.query.designer){
+                    this.setState({
+                        title: designer.title,
+                        blurb: designer.blurb,
+                        sale: designer.sale,
+                        dresses: designer.dresses
+                        });
+                }
             });
         }
 
+        componentDidMount() {
+            {this.state.dresses.map((d, id) =>
+                console.log(d.name)
+            )}
+            // console.log(this.state.dresses);
+        }
+
+
+
     render() {
+        
       return (
           <Layout url={this.props.url} theme="dark">
-            <SimpleSlider sliderContent={this.state.sliderContent} />
+            {/* <SimpleSlider sliderContent={this.state.sliderContent} /> */}
             <div className="main-body page-vs-nav">
                 <h1 className="tab">{this.state.title}</h1>
                 <p>{this.state.blurb}</p>

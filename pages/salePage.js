@@ -52,9 +52,9 @@ class SampleSale extends React.Component {
     render() {
       return (
           <Layout theme="dark">
-            <div className="main-body page-vs-nav top-content">
+            <div className="top-content page-vs-nav">
                 <h1 className="tab">Sample Sale</h1>
-                <p>blurb</p>
+                <p>We edit our dress range regularly and we are constantly taking deliveries of new styles so we like to discount our stunning dresses. A sample gown may be the answer if you want a designer dress to fit your budget.</p>
                 <DropdownButton
                     btnClass="dropdown-btn"
                     btnText={this.state.btnText}

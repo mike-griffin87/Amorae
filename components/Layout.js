@@ -10,10 +10,11 @@ class Layout extends React.Component {
         return(
             <div>
                 <BookAppointment CancelClick={this.props.CancelClick} active={this.props.appointment} />
-                <div className="nav-container">
+                <div className={(`${this.props.theme} nav-container`)}>
                     <span className="logo">Amorae</span>
+                    <Navigation theme={this.props.theme}/>
                 </div>
-                <Navigation theme={this.props.theme}/>
+                
                 {this.props.children}
                 <Footer />
             </div>

@@ -40,6 +40,7 @@ class Homepage extends React.Component {
                 <section className="main-body">
                     <h2 className="tab">About Amorae</h2>
                     <div className="img-container">
+                        <span></span>
                         <img src="../static/images/amorae-shop.jpg"/>
                     </div>
                     <i>We're an award winning bridal shop in Essex.</i>

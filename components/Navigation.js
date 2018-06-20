@@ -21,7 +21,7 @@ class Navigation extends React.Component {
         }
     }
 
-    closeNav() {
+    handleNav() {
         this.setState({ active: !this.state.active, overlay: !this.state.overlay });
     }
 
@@ -58,7 +58,7 @@ class Navigation extends React.Component {
                     CancelClick={() => this.closeOverlay()}
                 />
                 <Overlay coverNav={this.state.appointment} overlay={this.state.overlay} onClick={() => this.closeOverlay()} />
-                <div onClick={() => this.closeNav()} className={`hamburger`}>
+                <div onClick={() => this.handleNav()} className={`hamburger`}>
                     <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} top`)}></span>
                     <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} middle`)}></span>
                     <span className={(`${this.props.theme} ${this.state.active ? 'is-open' : 'null'} bottom`)}></span>
